@@ -1,0 +1,107 @@
+{>"layout" /}
+{<body}
+   {#recipes}
+<div class="well">
+<h4>{Name}<button class="btn btn-primary pull-right" data-toggle="collapse" href="#employee_{ID}" aria-expanded="false" aria-controles="employee_{ID}">View</button></h4>
+<div class = "collapse" id="employee_{ID}">
+<br />
+<br />
+<p><strong>Domain: </strong>{Domain}</p>
+<p><strong>Salary: </strong>{Salary}</p>
+<br />
+<hr />
+<button class="btn btn-default edit-employee"
+       data-toggle="collapse"
+       data-target="#editFormModal"
+       data-id="{ID}"
+       data-name="{Name}"
+       data-Domain="{Domain}"
+       data-Salary="{Salary}">
+ Edit
+<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+</button>
+
+<button class="btn btn-default delete-employee" data-id="{ID}">
+<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+</button>
+</div>
+</div>
+   {/recipes}
+<!-- Add Recipe Button -->
+<button class="btn btn-primary" data-toggle="modal" data-target="#formModal">Add Recipe</button>
+<!-- Form Modal -->
+<div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<form method="post" action="/add">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<h4 class="modal-title" id="formModalLabel">Add Recipe Data</h4>
+<div class="form-group">
+<label>ID</label>
+<input type="number" class="form-control" name="ID"/>
+</div>
+<div class="form-group">
+<label>Name</label>
+<input type="text" class="form-control" name="Name"/>
+</div>
+<div class="form-group">
+<label>Domain</label>
+<input type="text" class="form-control" name="Domain"/>
+</div>
+<div class="form-group">
+<label>Salary</label>
+<input type="text" class="form-control" name="Salary">
+</div>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+<input type="submit" class="btn btn-primary" value="Save"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+<!-- Edit Modal -->
+<div class="modal fade" id="editFormModal" tabindex="-1" role="dialog" aria-labelledby="editFormModalLabel">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<form method="post" action="/edit">
+<input type="hidden" id="edit-form-id" name="ID"/>
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+<h4 class="modal-title" id="editFormModalLabel">Edit Employee Details</h4>
+</div>
+<div class="modal-body">
+<div class="form-group">
+<label>id</label>
+<input type="number" class="form-control" name="edit-form-ID" id="edit-form-ID" disabled/>
+</div>
+<div class="form-group">
+<label>name</label>
+<input type="text" class="form-control" name="Name" id="edit-form-Name"/>
+</div>
+<div class="form-group">
+<label>Domain</label>
+<input type="text" class="form-control" name="Domain" id="edit-form-Domain"/>
+</div>
+<div class="form-group">
+<label>Salary</label>
+<input type="text" class="form-control" name="Salary" id="edit-form-Salary"/>
+</div>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+<input type="submit" class="btn btn-primary" value="Save"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+{/body}

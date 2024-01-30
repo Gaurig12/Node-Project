@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Recipe Book </title>
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">    
+<link rel = "stylesheet" href = "/css/style.css">
+</head>
+<body>
+<div class= "container">
+<div class="row">
+<div class="col-md-offset-2 col-md-7">
+               {+body /}
+</div>
+</div>
+</dv>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>
